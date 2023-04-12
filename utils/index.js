@@ -13,7 +13,8 @@ const logger = createLogger({
       maxFiles: 5,
     }),
     new transports.Console()
-  ]
+  ],
+  exitOnError : false
 });
 
 module.exports = logger;
