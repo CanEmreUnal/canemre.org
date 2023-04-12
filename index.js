@@ -1,6 +1,6 @@
 const express = require('express')
-const { httpLogger } = require('./middlewares');
-const { logger } = require('./utils');
+const httpLogger = require('./middlewares');
+const logger = require('./utils');
 
 const app = express()
 
