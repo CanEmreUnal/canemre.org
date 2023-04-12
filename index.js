@@ -1,5 +1,11 @@
 const express = require('express')
+const { httpLogger } = require('./middlewares');
+const { logger } = require('./utils');
+
 const app = express()
+
+app.use(httpLogger);
+
 const port = 3000
 
 app.get('/', (req, res) => {
@@ -11,5 +17,5 @@ app.get('/ping', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`App listening on port ${port}`)
+    logger.info(`Server listening on port ${port}`);
 })
