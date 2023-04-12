@@ -6,6 +6,6 @@ logger.stream = {
 };
 
 module.exports = morgan(
-  ':remote-addr - :remote-user - :forwarded-for - [:date] ":method :url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent"',
+  ':remote-addr - :remote-user - [:date] ":method :url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent"',
   { stream: logger.stream }
 );
