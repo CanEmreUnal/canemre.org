@@ -11,7 +11,8 @@ const logger = createLogger({
       json: false,
       maxsize: 5242880,
       maxFiles: 5,
-    })
+    }),
+    new transports.Console()
   ]
 });
 
