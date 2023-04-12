@@ -1,7 +1,6 @@
 const express = require('express')
 const httpLogger = require('./middlewares');
 const logger = require('./utils');
-const fs = require("fs")
 
 const app = express()
 
@@ -16,8 +15,6 @@ app.get('/', (req, res) => {
 app.get('/ping', (req, res) => {
     res.send('I\'m ok!')
 })
-
-fs.mkdirSync('./logs', (err) => { /* no-op */ })
 
 app.listen(port, () => {
     logger.info(`Server listening on port ${port}`);
